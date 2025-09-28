@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Outside the Box - Idea Generator</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 50px; }
+    button { padding: 10px 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h1>💡 Outside the Box Idea Generator</h1>
+  <p id="idea">Click the button to get an idea!</p>
+  <button onclick="newIdea()">Generate Idea</button>
+
+  <script>
+    const ideas = [
+      "Turn your notes into songs 🎶",
+      "Automate your daily to-do list ⏰",
+      "Visualize your week as a comic strip 📊",
+      "Gamify your learning experience 🎮",
+      "Create a chatbot that tells jokes 🤖"
+    ];
+
+    function newIdea() {
+      document.getElementById('idea').innerText =
+        ideas[Math.floor(Math.random() * ideas.length)];
+    }
+  </script>
+</body>
+</html>
